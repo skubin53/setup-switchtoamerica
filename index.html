@@ -72,24 +72,10 @@ h1{
   overflow:hidden;border:1px solid var(--line);border-radius:10px;background:#000;
   box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
-.video iframe,.video .play{position:absolute;inset:0;width:100%;height:100%;border:0}
-.play{padding:0;margin:0;background:#000;cursor:pointer;display:block}
-.play img{display:block;width:100%;height:100%;object-fit:cover;opacity:.92;transition:opacity .2s}
-.play:hover img{opacity:1}
-.play .btn{
-  position:absolute;left:50%;top:50%;width:76px;height:54px;transform:translate(-50%,-50%);
-  border-radius:14px;background:var(--red);display:grid;place-items:center;
-  box-shadow:0 4px 18px rgba(0,0,0,.45);transition:transform .15s;
-}
-.play:hover .btn{transform:translate(-50%,-50%) scale(1.06)}
-.play .btn svg{width:26px;height:26px;fill:#fff;margin-left:4px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .cap{margin:10px 0 0;font-size:15px;color:var(--ink-soft);text-align:center}
 .cap b{color:var(--ink);font-weight:600}
-.group{width:100%;margin-top:26px;display:flex;flex-direction:column;gap:10px}
-.label{
-  margin:0 0 2px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-faint);text-align:center;
-}
+.group{width:100%;margin-top:22px;display:flex;flex-direction:column;gap:10px}
 .link{
   display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;
   padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--tile);
@@ -105,7 +91,7 @@ h1{
 .cta:hover{background:var(--cta-hover)}
 .cta:active{background:var(--cta-press)}
 .foot{margin:26px 0 0;font-size:13px;color:var(--ink-faint);text-align:center}
-a:focus-visible,.play:focus-visible{outline:3px solid #fff;outline-offset:3px}
+a:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @media (max-width:420px){
   .page{padding-top:max(28px,env(safe-area-inset-top,0px))}
   h1{font-size:27px}
@@ -118,55 +104,27 @@ a:focus-visible,.play:focus-visible{outline:3px solid #fff;outline-offset:3px}
 <main class="page">
   <div class="me"><img src="/img/shannon-288.webp" width="98" height="98" alt="Shannon, Switch to America"></div>
   <h1>Welcome to Switch to America</h1>
-  <p class="lede">New shopper? Start here. Everything for your first month is on this one page.</p>
+  <p class="lede">New shopper? Start here.</p>
 
-  <div class="video" id="video">
-    <button class="play" type="button" data-id="hvJ76iHklLI" aria-label="Play the 5-minute tour of your new store">
-      <img src="https://i.ytimg.com/vi/hvJ76iHklLI/maxresdefault.jpg" width="1280" height="720" alt="">
-      <span class="btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span>
-    </button>
-    <noscript><iframe src="https://www.youtube-nocookie.com/embed/hvJ76iHklLI?rel=0" title="A tour of your new store" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></noscript>
+  <div class="video">
+    <iframe src="https://www.youtube-nocookie.com/embed/hvJ76iHklLI?rel=0&amp;playsinline=1" title="A tour of your new store" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="cap"><b>Watch this first.</b> A 5-minute tour of your new store.</p>
 
-  <section class="group" aria-label="Get set up">
-    <p class="label">Get set up</p>
-    <a class="link" href="https://digital-library.media/public/share/en_XzGGb" target="_blank" rel="noopener">Your Member Benefits (Month 1)</a>
-    <a class="link" href="https://www.melaleuca.com/" target="_blank" rel="noopener">Shop online</a>
-    <a class="link" href="https://apps.apple.com/app/id6450118542" target="_blank" rel="noopener">Get the app for iPhone</a>
-    <a class="link" href="https://play.google.com/store/apps/details?id=com.melaleuca.shopping" target="_blank" rel="noopener">Get the app for Android</a>
-  </section>
-
-  <section class="group" aria-label="Join us">
-    <p class="label">Join us</p>
-    <a class="link" href="https://www.facebook.com/groups/switchtoamerica" target="_blank" rel="noopener">Switch to America Facebook group</a>
-  </section>
-
-  <section class="group" aria-label="Try these next">
-    <p class="label">Try these next</p>
-    <a class="link" href="https://www.melaleuca.com/riverbendranch" target="_blank" rel="noopener">Riverbend Ranch Black Label beef</a>
+  <nav class="group" aria-label="Start here links">
+    <a class="link" href="https://digital-library.media/public/share/en_XzGGb" target="_blank" rel="noopener">Welcome: Member Benefits (Month 1)</a>
+    <a class="link" href="https://www.facebook.com/groups/switchtoamerica" target="_blank" rel="noopener">Facebook Group: Switch to America</a>
+    <a class="link" href="https://www.melaleuca.com/riverbendranch" target="_blank" rel="noopener">Beef: Riverbend Ranch Black Label</a>
+    <a class="link" href="https://apps.apple.com/app/id6450118542" target="_blank" rel="noopener">Melaleuca App (iOS)</a>
+    <a class="link" href="https://play.google.com/store/apps/details?id=com.melaleuca.shopping" target="_blank" rel="noopener">Melaleuca App (Android)</a>
+    <a class="link" href="https://www.melaleuca.com/" target="_blank" rel="noopener">Melaleuca.com</a>
     <a class="link" href="https://mela-cdn-source-prod.s3.us-west-2.amazonaws.com/na/documents/product-store/cleaning-laundry/Ecosense-cleaning-handbook--en-US.pdf" target="_blank" rel="noopener">Cleaning Handbook</a>
-    <a class="link" href="https://online.flippingbook.com/view/655150094/" target="_blank" rel="noopener">Mocktails &amp; Desserts recipe book</a>
-    <a class="link" href="https://vimeo.com/921813800/9476a7c6ff" target="_blank" rel="noopener">Home Conversion Pack unboxing video</a>
-  </section>
+    <a class="link" href="https://online.flippingbook.com/view/655150094/" target="_blank" rel="noopener">Uncompromised Mocktails &amp; Desserts</a>
+    <a class="link" href="https://vimeo.com/921813800/9476a7c6ff" target="_blank" rel="noopener">Home Conversion Pack Unboxing</a>
+  </nav>
 
-  <a class="link cta" href="sms:+12089361272">Questions? Text Shannon</a>
+  <a class="link cta" href="sms:+12089361272">Questions? Text Shannon at 208-936-1272</a>
   <p class="foot">Switch to America</p>
 </main>
-<script>
-(function(){
-  var b=document.querySelector('.play');
-  if(!b)return;
-  b.addEventListener('click',function(){
-    var f=document.createElement('iframe');
-    f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-id')+'?autoplay=1&rel=0&playsinline=1';
-    f.title='A tour of your new store';
-    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    f.referrerPolicy='strict-origin-when-cross-origin';
-    f.allowFullscreen=true;
-    b.replaceWith(f);
-  });
-})();
-</script>
 </body>
 </html>
